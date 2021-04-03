@@ -1,0 +1,47 @@
+.form {
+  text-align: center;
+}
+
+.form input {
+  display: block;
+  margin: 5px auto 15px;
+
+  max-width: 300px;
+  height: 30px;
+
+  border: 2px solid black;
+  border-radius: 7px;
+
+  outline: none;
+}
+
+.form input:focus {
+  border: 2px solid red;
+}
+
+.btn {
+  width: 120px;
+  padding: 10px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+
+  border: 2px solid black;
+  border-radius: 7px;
+
+  background-color: transparent;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: red;
+
+  border: 2px solid red;
+
+  outline: none;
+}
