@@ -27,13 +27,14 @@ class ContactForm extends Component {
     event.preventDefault();
     const id = uuidv4();
     const { name, number } = this.state;
+    const { items } = this.props;
 
     if (!name) {
       return;
     }
 
-    const existingContact = this.props.state.contacts.items.find(
-      contact => contact.name === name,
+    const existingContact = items.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase(),
     );
 
     if (existingContact) {
@@ -84,7 +85,7 @@ class ContactForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  state,
+  items: state.contacts.items,
 });
 
 const mapDispatchToProps = dispatch => ({
